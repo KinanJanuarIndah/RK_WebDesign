@@ -1,0 +1,625 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Menghindari masalah padding dan width */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px; /* Ukuran ruang kiri dan kanan */
+}
+
+.logo {
+    flex-shrink: 0; /* Mencegah logo mengecil */
+}
+
+.logo a img {
+    width: 120px; /* Ukuran logo */
+    height: auto;
+}
+
+.menu {
+    display: flex; /* Membuat menu sejajar secara horizontal */
+}
+
+nav {
+    position: fixed; /* Membuat nav tetap di atas saat di-scroll */
+    top: 0; /* Menempatkan nav di bagian atas */
+    width: 100%; /* Memastikan nav mencakup seluruh lebar layar */
+    z-index: 100; /* Memastikan nav berada di atas elemen lainnya */
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-image: url(headerr.jpeg);
+    background-position: center; /* Memperbaiki posisi latar */
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Membuat elemen menu sejajar secara horizontal */
+    gap: 20px; /* Jarak antar item menu */
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 5px; /* Padding untuk tautan */
+    line-height: 80px; /* Sesuaikan dengan tinggi navbar */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    padding: 20px; /* Memberi jarak di sekitar konten section */
+    margin-top: 50px;
+}
+
+section img {
+    width: 300px;
+    max-width: 50%; /* Agar gambar tidak melebihi lebar kontainer */
+    height: relative; /* Mempertahankan proporsi gambar */
+    margin-top: 100px; /* Jarak antara gambar dan banner di atas */
+    margin-right: 20px; /* Jarak antara gambar dan deskripsi di sebelah kanan */
+}
+
+.kolom {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-left: 20px; /* Memberi jarak tambahan antara tulisan dan gambar */
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'oswald';
+    color: black;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 800;
+    font-family: 'oswald';
+    margin-bottom: 20px;
+    color:blueviolet;
+    width: 100%;
+    line-height: 50px;
+}
+
+a.tbl-merah {
+    background: #001F3F;
+    border-radius: 7px;
+    margin-top: 7px;
+    padding: 7px 10px 7px 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.banner {
+    margin-top: 100px;
+    position: relative; /* Add this to make the image absolute */
+    height: 100vh; /* Set the height of the banner section to full screen */
+    display: flex; /* Make the banner section a flex container */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 50px 0; /* Add some padding to the banner section */
+}
+
+.banner .kolom {
+    text-align: center; /* Center the text */
+    color: #fff; /* Set the text color to white */
+    width: 50%; /* Set the width of the column to 50% */
+    margin: 0 auto; /* Center the column horizontally */
+    z-index: 1; /* Add this to make the column on top of the image */
+    padding: 20px; /* Add some padding to the column */
+}
+
+.banner img {
+    position: absolute; /* Make the image absolute */
+    top: 0; /* Position the image at the top */
+    left: 0; /* Position the image at the left */
+    width: 100%; /* Make the image full-width */
+    height: 120%; /* Make the image full-height */
+    object-fit: cover; /* Make sure the image covers the entire area */
+}
+
+.banner .deskripsi {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'oswald';
+    color: #001F3F;
+    animation: move 3s infinite; /* Add this line to animate the text */
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.banner h2 {
+    font-size: 36px; /* Set the font size for the heading */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 5px; /* Add some margin below the heading */
+}
+
+.banner p {
+    font-size: 16px; /* Set the font size for the paragraph */
+    margin-bottom: 10px; /* Add some margin below the paragraph */
+    color: #001F3F;
+}
+
+.banner a.tbl-yellow {
+    background-color: #CB80AB; /* Set the background color for the yellow button */
+    color: #af3a3a; /* Set the text color to white */
+    padding: 7px 15px; /* Add some padding to the button */
+    border-radius: 5px; /* Add some border radius to the button */
+    text-decoration: none; /* Remove the underline from the button */
+}
+
+.banner a.tbl-yellow:hover {
+    background: #e7b548;
+    text-decoration: none;
+}
+
+a.tbl-merah:hover {
+    background: #6A9AB0;
+    text-decoration: none;
+}
+
+a.tbl-biru {
+    background: #CB80AB;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 10px 15px 10px 15px;
+    color: #130101;
+    cursor: pointer;
+    font-weight: bold; 
+}
+
+a.tbl-biru:hover {
+    background: #C68FE6;
+    text-decoration: none;
+}
+
+/* Tambahan CSS untuk Visi dan Misi */
+.visi-misi {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    align-items: flex-start; /* Align items at the start vertically */
+    margin: 40px 0;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar responsif pada layar kecil */
+}
+
+.box {
+    flex: 1 1 300px; /* Grow, shrink, basis */
+    max-width: 500px; /* Maksimum lebar setiap kotak */
+    background-color: #E7CCCC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #004a7c;
+}
+
+.box p, .box ul {
+    font-size: 16px;
+    color: #333;
+}
+
+.box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.box ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsivitas tambahan jika diperlukan */
+@media (max-width: 768px) {
+    .visi-misi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        max-width: 100%; /* Kotak mengambil seluruh lebar pada layar kecil */
+    }
+}
+
+/* Quiz Section Styles */
+#quiz {
+    background-color: #f0f8ff; /* Warna latar belakang yang cerah */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quiz h2 {
+    font-size: 36px;
+    color: #004a7c;
+    margin-bottom: 20px;
+}
+
+#quiz p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 50%; /* Ubah sesuai progres aktual */
+    background-color: #004a7c;
+    border-radius: 25px;
+    transition: width 0.3s ease;
+}
+
+/* Quiz Questions */
+.quiz-form {
+    text-align: left;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-question p {
+    font-size: 18px;
+    color: #333;
+}
+
+.quiz-question ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.quiz-question ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.quiz-question ul li input[type="radio"] {
+    margin-right: 10px;
+}
+
+.feedback {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+/* Show feedback when radio button is checked */
+.quiz-question ul li input[type="radio"]:checked + label + .feedback.correct {
+    display: inline;
+}
+
+.quiz-question ul li input[type="radio"]:checked + label + .feedback.incorrect {
+    display: inline;
+}
+
+/* Submit Button */
+.quiz-submit {
+    background-color: #004a7c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.quiz-submit:hover {
+    background-color: #0066cc;
+}
+
+/* Quiz Result */
+.quiz-result {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #004a7c;
+    font-weight: bold;
+    position: relative;
+}
+
+.result-button {
+    background-color: #004a7c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.result-button:hover {
+    background-color: #0066cc;
+}
+
+.result-content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffd700;
+    border-radius: 10px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#show-result:checked ~ .result-content {
+    display: block;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Tambahan untuk responsivitas */
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    #quiz h2 {
+        font-size: 28px;
+    }
+
+    #quiz p {
+        font-size: 16px;
+    }
+
+    .quiz-submit {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .quiz-result {
+        font-size: 18px;
+    }
+
+    .result-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .result-content {
+        font-size: 16px;
+    }
+}
+
+
+#help {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#help h2, #Help h3 {
+    color: #004a7c;
+}
+
+#help p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#help ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#help ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#help ul li strong {
+    color: #004a7c;
+}
+
+#our-team {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Warna latar belakang */
+}
+
+#our-team h2 {
+    font-size: 36px;
+    color: #004a7c;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; /* Memusatkan box secara horizontal */
+    gap: 30px; /* Jarak antar box */
+    flex-wrap: wrap; /* Agar responsif pada layar kecil */
+    align-items: center; /* Menjaga elemen sejajar secara vertikal */
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+    width: 200px;  
+    height: 200px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 3px solid #004a7c; /* Border warna untuk foto */
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center; /* Center align for mobile */
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
+
+
+#contact {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: #004a7c;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact a img {
+    width: 100px; /* Ukuran ikon WhatsApp */
+    height: 100px;
+    transition: transform 0.3s; /* Animasi ketika hover */
+}
+
+#contact a img:hover {
+    transform: scale(10.10); /* Memperbesar ikon saat di hover */
+}
+
+/* Secara default, form Sign In disembunyikan */
+.sign-in-form {
+    display: none;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Jika ID "signin" menjadi target, form akan tampil */
+#signin:target {
+    display: block;
+}
+
+/* Gaya untuk Footer */
+footer {
+    background-color: #E7CCCC; /* Ubah sesuai warna yang diinginkan */
+    color: palevioletred; /* Ubah warna teks sesuai kebutuhan */
+    padding: 20px; /* Menambahkan padding agar footer lebih lebar */
+    text-align: right; /* Menempatkan teks di pojok kanan */
+    position: relative; /* Membuat posisi footer lebih fleksibel */
+    bottom: 0; /* Menempatkan footer di bagian bawah halaman */
+    width: 100%; /* Memastikan footer memenuhi lebar halaman */
+}
+
+html {
+    scroll-behavior: smooth;
+}
